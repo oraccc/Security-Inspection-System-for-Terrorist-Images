@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <title>{{page.title}}</title>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css' %}">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome/font-awesome.min.css' %}">
+    <!-- Animation -->
+    <link rel="stylesheet" href="{% static 'plugins/animate.css' %}">
+    <!-- Prettyphoto -->
+    <link rel="stylesheet" href="{% static 'plugins/prettyPhoto.css' %}">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="{% static 'plugins/owl/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/owl/owl.theme.css' %}">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="{% static 'plugins/flex-slider/flexslider.css' %}">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="{% static 'plugins/cd-hero/cd-hero.css' %}">
+    <!-- Style Swicther -->
+    <link id="style-switch" href="{% static 'css/presets/preset5.css' %}" media="screen" rel="stylesheet"
+          type="text/css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+    <script src="plugins/html5shiv.js"></script>
+    <script src="plugins/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Main Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="icon" href="img/favicon/favicon-32x32.png" type="image/x-icon"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.png">
+
+</head>
+
+<body>
+
+<!-- Style switcher start -->
+<div class="style-switch-wrapper">
+    <div class="style-switch-button">
+        <i class="fa fa-sliders"></i>
+    </div>
+    <h3>页面风格选择</h3>
+    <button id="preset1" class="btn btn-sm btn-primary"></button>
+    <button id="preset2" class="btn btn-sm btn-primary"></button>
+    <button id="preset3" class="btn btn-sm btn-primary"></button>
+    <button id="preset4" class="btn btn-sm btn-primary"></button>
+    <button id="preset5" class="btn btn-sm btn-primary"></button>
+    <button id="preset6" class="btn btn-sm btn-primary"></button>
+    <br/><br/>
+    <a class="btn btn-sm btn-primary close-styler float-right">关闭</a>
+</div>
+<!-- Style switcher end -->
+
+<div class="body-inner">
+
+    <!-- Header start -->
+    <header id="header" class="fixed-top header" role="banner">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler ml-auto border-0 rounded-0 text-white" type="button"
+                        data-toggle="collapse"
+                        data-target="#navigation" aria-controls="navigation" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="fa fa-bars"></span>
+                </button>
+
+                <div class="collapse navbar-collapse text-center" id="navigation">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">主页</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/article" role="button" data-toggle="dropdown"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                文档
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/article">目录</a>
+                                <a class="dropdown-item" href="/article/part-one">整体概况</a>
+                                <a class="dropdown-item" href="/article/part-two">暴恐图片检测</a>
+                                <a class="dropdown-item" href="/article/part-three">暴恐图文分析</a>
+                                <a class="dropdown-item" href="/article/part-four">暴恐头目检测识别</a>
+                                <a class="dropdown-item" href="/article/part-five">暴恐旗帜检测</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/joint-detection">联合检测</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                单独检测
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/picture-detection">暴恐图片检测</a>
+                                <a class="dropdown-item" href="/pic-text-detection">暴恐图文分析</a>
+                                <a class="dropdown-item" href="/person-detection">暴恐政治头目检测</a>
+                                <a class="dropdown-item" href="/flag-detection">暴恐旗帜检测</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                               aria-haspopup="true"
+                               aria-expanded="false">
+                                上传
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/upload">上传暴恐图片</a>
+                                <a class="dropdown-item" href="/upload2">上传暴恐头目图片</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--/ Header end -->
+
+    <div id="banner-area">
+        <img src="{% static 'images/banner/tmp_banner1.jpg' %}" alt=""/>
+        <div class="parallax-overlay"></div>
+        <!-- Subpage title start -->
+        <div class="banner-title-content">
+            <div class="text-center">
+                <h2>暴恐政治头目检测</h2>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="/upload2">上传图片进行检测</a></li>
+                        <li class="breadcrumb-item text-white" aria-current="page">Detection</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- Subpage title end -->
+    </div><!-- Banner area end -->
+
+    <!-- Portfolio start -->
+    <section id="main-container" class="portfolio portfolio-box">
+        <div class="container">
+            <!--Isotope filter start -->
+            <div class="row text-center">
+                <div style="margin: 10px 230px">
+                    <img src="{% static 'images/sum3.png' %}">
+                </div>
+                <div style="font-size: 25px;font-weight: bold;color:#192e80;text-align: center;margin:0 auto;">
+                    请选择需要检测的图片
+                </div>
+                <div class="col-12">
+                    <br>
+                    <div class="isotope-nav" data-isotope-nav="isotope">
+                        <ul>
+                            <li><a href="#" class="active" data-filter="*">全部</a></li>
+                            <li><a href="#" data-filter=".mideast">中东地区</a></li>
+                            <li><a href="#" data-filter=".asia">东亚地区</a></li>
+                            <li><a href="#" data-filter=".else">其他地区</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- Isotope filter end -->
+
+            <div id="isotope" class="isotope row">
+                <div class="col-sm-3 mideast isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/1.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 1</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-1"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/1.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 mideast isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/2.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 2</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-2"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/2.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 else isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/3.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 3</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-3"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/3.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 asia isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/4.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 4</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-4"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/4.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 asia isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/5.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 5</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-5"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/5.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 mideast isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/6.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 6</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-6"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/6.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 asia isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/7.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 7</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-7"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/7.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 asia isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/8.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 8</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-8"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/8.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 mideast isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/9.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 9</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-9"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/9.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 mideast isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/10.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 10</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-10"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/10.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 asia isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/11.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 11</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-11"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/11.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 else isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/12.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 12</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-12"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/12.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 else isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/13.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 13</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-13"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/13.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 mideast isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/14.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 14</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-14"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/14.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 else isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/15.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 15</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-15"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/15.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 mideast isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/16.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 16</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-16"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/16.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 mideast isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/17.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 17</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-17"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/17.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 else isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/18.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 18</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-18"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/18.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 asia isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/19.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 19</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-19"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/19.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+
+                <div class="col-sm-3 else isotope-item">
+                    <div class="grid">
+                        <figure class="m-0 effect-oscar">
+                            <img src="{% static 'images/person/20.jpg' %}" alt="">
+                            <figcaption>
+                                <h3>Sample 20</h3>
+                                <a class="link icon-pentagon" href="/person-detection/sample-20"><i
+                                        class="fa fa-search"></i></a>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto"
+                                   href="{% static 'images/person/20.jpg' %}"><i
+                                        class="fa fa-link"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div><!-- Isotope item end -->
+            </div><!-- Content row end -->
+        </div><!-- Container end -->
+    </section><!-- Portfolio end -->
+
+    <div class="gap-40"></div>
+
+    <!-- Footer start -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 footer-widget">
+                    <h3 class="widget-title">项目文档</h3>
+                    <div class="latest-post-items media">
+                        <div class="latest-post-content media-body">
+                            <h4><a href="/article/part-one">基于深度学习的暴恐图文分析项目整体概况</a></h4>
+                            <p class="post-meta">
+                                <span class="date"><i class="icon icon-calendar"></i> Aug 12, 2020</span>
+                            </p>
+                        </div>
+                    </div><!-- 1st Latest Post end -->
+
+                    <div class="latest-post-items media">
+                        <div class="latest-post-content media-body">
+                            <h4><a href="/article/part-two">暴恐图片检测算法</a></h4>
+                            <p class="post-meta">
+                                <span class="date"><i class="icon icon-calendar"></i> Aug 12, 2020</span>
+                            </p>
+                        </div>
+                    </div><!-- 2nd Latest Post end -->
+
+                    <div class="latest-post-items media">
+                        <div class="latest-post-content media-body">
+                            <h4><a href="/article/part-three">暴恐图文分析</a></h4>
+                            <p class="post-meta">
+                                <span class="date"><i class="icon icon-calendar"></i> Apr 17, 2015</span>
+                            </p>
+                        </div>
+                    </div><!-- 3rd Latest Post end -->
+
+                </div>
+                <!--/ End Recent Posts-->
+
+
+                <div class="col-md-4 col-sm-12 footer-widget">
+                    <h3 class="widget-title">项目图片</h3>
+
+                    <div class="img-gallery">
+                        <div class="img-container">
+                            <a class="thumb-holder" data-rel="prettyPhoto">
+                                <img src="{% static 'images/gallery/1.jpg' %}" alt="">
+                            </a>
+                            <a class="thumb-holder" data-rel="prettyPhoto">
+                                <img src="{% static 'images/gallery/2.jpg' %}" alt="">
+                            </a>
+                            <a class="thumb-holder" data-rel="prettyPhoto">
+                                <img src="{% static 'images/gallery/3.jpg' %}" alt="">
+                            </a>
+                            <a class="thumb-holder" data-rel="prettyPhoto">
+                                <img src="{% static 'images/gallery/4.jpg' %}" alt="">
+                            </a>
+                            <a class="thumb-holder" data-rel="prettyPhoto">
+                                <img src="{% static 'images/gallery/5.jpg' %}" alt="">
+                            </a>
+                            <a class="thumb-holder" data-rel="prettyPhoto">
+                                <img src="{% static 'images/gallery/6.jpg' %}" alt="">
+                            </a>
+                            <a class="thumb-holder" data-rel="prettyPhoto">
+                                <img src="{% static 'images/gallery/7.jpg' %}" alt="">
+                            </a>
+                            <a class="thumb-holder" data-rel="prettyPhoto">
+                                <img src="{% static 'images/gallery/8.jpg' %}" alt="">
+                            </a>
+                            <a class="thumb-holder" data-rel="prettyPhoto">
+                                <img src="{% static 'images/gallery/9.jpg' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--/ end flickr -->
+
+                <div class="col-md-3 col-sm-12 footer-widget footer-about-us">
+                    <h3 class="widget-title">关于我们</h3>
+                    <p>上海交通大学第二十期大创项目 —— 基于深度学习的暴恐图像安全审核系统</p>
+                    <h4>地址</h4>
+                    <p>上海市 闵行区 东川路800号 上海交通大学</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Email:</h4>
+                            <p>xuyang2018@sjtu.edu.cn</p>
+                        </div>
+                    </div>
+                    <form action="#" role="form">
+                        <div class="input-group subscribe">
+                            <input type="email" class="form-control" placeholder="Email" required="">
+                            <span class="input-group-addon">
+	              <button class="btn" type="submit"><i class="fa fa-envelope-o"> </i></button>
+	            </span>
+                        </div>
+                    </form>
+                </div>
+                <!--/ end about us -->
+
+            </div><!-- Row end -->
+        </div><!-- Container end -->
+    </footer><!-- Footer end -->
+
+    <!-- Copyright start -->
+    <section id="copyright" class="copyright angle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="footer-social unstyled">
+                        <li>
+                            <a title="Twitter" href="#">
+                                <span class="icon-pentagon wow bounceIn"><i class="fa fa-twitter"></i></span>
+                            </a>
+                            <a title="Facebook" href="#">
+                                <span class="icon-pentagon wow bounceIn"><i class="fa fa-facebook"></i></span>
+                            </a>
+                            <a title="Google+" href="#">
+                                <span class="icon-pentagon wow bounceIn"><i class="fa fa-google-plus"></i></span>
+                            </a>
+                            <a title="linkedin" href="#">
+                                <span class="icon-pentagon wow bounceIn"><i class="fa fa-linkedin"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/ Row end -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="copyright-info">
+                        &copy; SJTU
+                    </div>
+                </div>
+            </div>
+            <!--/ Row end -->
+            <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix position-fixed">
+                <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i></button>
+            </div>
+        </div>
+        <!--/ Container end -->
+    </section>
+    <!--/ Copyright end -->
+
+</div><!-- Body inner end -->
+
+<!-- jQuery -->
+<script src="{% static 'plugins/jQuery/jquery.min.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'plugins/bootstrap/bootstrap.min.js' %}"></script>
+<!-- Style Switcher -->
+<script type="text/javascript" src="{% static 'plugins/style-switcher.js' %}"></script>
+<!-- Owl Carousel -->
+<script type="text/javascript" src="{% static 'plugins/owl/owl.carousel.js' %}"></script>
+<!-- PrettyPhoto -->
+<script type="text/javascript" src="{% static 'plugins/jquery.prettyPhoto.js' %}"></script>
+<!-- Bxslider -->
+<script type="text/javascript" src="{% static 'plugins/flex-slider/jquery.flexslider.js' %}"></script>
+<!-- CD Hero slider -->
+<script type="text/javascript" src="{% static 'plugins/cd-hero/cd-hero.js' %}"></script>
+<!-- Isotope -->
+<script type="text/javascript" src="{% static 'plugins/isotope.js' %}"></script>
+<script type="text/javascript" src="{% static 'plugins/ini.isotope.js' %}"></script>
+<!-- Wow Animation -->
+<script type="text/javascript" src="{% static 'plugins/wow.min.js' %}"></script>
+<!-- Eeasing -->
+<script type="text/javascript" src="{% static 'plugins/jquery.easing.1.3.js' %}"></script>
+<!-- Counter -->
+<script type="text/javascript" src="{% static 'plugins/jquery.counterup.min.js' %}"></script>
+<!-- Waypoints -->
+<script type="text/javascript" src="{% static 'plugins/waypoints.min.js' %}"></script>
+<!-- Main Script -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="299e107a-9983-4057-acda-b1e9345b9999" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1hm8iFex5suOzIsn4Jd05dob88C" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.test">
+    <configuration name="face-recognition" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="system" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../face-recognition" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../face-recognition/face-recognition.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="face_recognition" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="system" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../face-recognition" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../face-recognition/face_recognition.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="system" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.face_recognition" />
+        <item itemvalue="Python.face-recognition" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="159" y="107" width="1530" height="774" key="DiffContextDialog" timestamp="1602254164937">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="159" y="107" width="1530" height="774" key="DiffContextDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1602254164937" />
+    <state x="675" y="580" key="FileChooserDialogImpl" timestamp="1602063077960">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="675" y="580" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1602063077960" />
+    <state width="940" height="229" key="GridCell.Tab.0.bottom" timestamp="1602253465225">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="940" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1602253465225" />
+    <state width="940" height="229" key="GridCell.Tab.0.center" timestamp="1602253465225">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="940" height="229" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1602253465225" />
+    <state width="940" height="229" key="GridCell.Tab.0.left" timestamp="1602253465225">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="940" height="229" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1602253465225" />
+    <state width="940" height="229" key="GridCell.Tab.0.right" timestamp="1602253465225">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="940" height="229" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1602253465225" />
+    <state x="513" y="159" key="SettingsEditor" timestamp="1602056193254">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="513" y="159" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1602056193254" />
+    <state x="563" y="201" width="929" height="774" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1602254164937">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="563" y="201" width="929" height="774" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1602254164937" />
+    <state x="385" y="173" width="736" height="774" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1600952782102">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="385" y="173" width="736" height="774" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1600952782102" />
+    <state x="387" y="239" width="1279" height="667" maximized="true" key="dock-window-1" timestamp="1602054292778">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="387" y="239" width="1279" height="667" maximized="true" key="dock-window-1/0.0.1920.1080@0.0.1920.1080" timestamp="1602054292778" />
+  </component>
+</project>
